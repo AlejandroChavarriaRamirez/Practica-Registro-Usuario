@@ -5,8 +5,9 @@
 package gestion;
 
 /**
- *
- * @author aleja
+ * Alejandro Chavarria Ramirez
+ * Daniela Jazmin Gomez Peña
+ * Marisol Del Carmen Masis Monge
  */
 public class Principal {
 
