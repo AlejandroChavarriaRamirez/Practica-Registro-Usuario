@@ -173,12 +173,26 @@ public class Registro extends javax.swing.JFrame {
         usuario.setCorreo(correo);
         usuario.setContrasena(contrasena);
 
-        // Faltan las validaciones, van aqui
+        
         
         // Validar correo, si no es valido mostrar mensaje de error
         
-        // Validar la contrasena, si no cumple mostrar mensaje de error
+        if (!usuario.validarCorreo()) {
+                JOptionPane.showMessageDialog(null,
+                    "El correo no es válido. Debe contener @ y un dominio (.com, .net u .org)",
+                    "Error de correo",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         
+        // Validar la contrasena, si no cumple mostrar mensaje de error
+        if (!usuario.validarContrasena()) {
+            JOptionPane.showMessageDialog(null,
+                "La contraseña debe tener al menos 8 caracteres",
+                "Error de contraseña",
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
         // Si todo esta bien mostramos los datos
         JOptionPane.showMessageDialog(null,
